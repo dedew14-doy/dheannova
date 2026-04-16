@@ -1,0 +1,6 @@
+{
+  "name": "SMK Prima Unggul Attendance System",
+  "description": "Sistem absensi siswa dan karyawan untuk SMK Prima Unggul dengan pengelolaan user dan rekapitulasi data.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

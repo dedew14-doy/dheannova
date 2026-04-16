@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-primary: #F97316;
+  --color-brand-light: #FFEDD5;
+  --color-brand-dark: #C2410C;
+  --color-bg-gray: #F8FAFC;
+  --color-text-dark: #1E293B;
+  --color-text-muted: #64748B;
+  --color-border-gray: #E2E8F0;
+  --color-surface-hover: #F1F5F9;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg-gray text-text-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-primary hover:bg-brand-dark text-white font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border border-border-gray text-text-muted hover:bg-surface-hover font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2;
+  }
+
+  .btn-logout {
+    @apply bg-transparent border border-border-gray text-red-500 hover:bg-red-50 font-semibold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-border-gray focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-transparent transition-all;
+  }
+  
+  .card {
+    @apply bg-white p-6 rounded-xl border border-border-gray shadow-none;
+  }
+
+  .status-badge {
+    @apply px-2 py-1 rounded font-semibold text-[11px];
+  }
+}
